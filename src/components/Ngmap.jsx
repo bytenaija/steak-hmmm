@@ -4,13 +4,13 @@ import ZoonOut from "../assets/images/zoomout.png"
 import "../assets/css/Ngmap.scss"
 import Map from './Map'
 
-const Ngmap = () => {
+const Ngmap = ({stateData}) => {
   return (
     <section className="map-section">
     <div className='map-wrapper'>
       <div className="map-inner">
         <div className="iframe-wrapper">
-            <Map />
+            <Map stateData={stateData}/>
         </div>
 
         <div className="info-wrapper">
@@ -33,6 +33,11 @@ const Ngmap = () => {
             <div className="party">
               <span className="color-red"></span>
               <p>PDP</p>
+            </div>
+
+            <div className="party">
+              <span className="color-gray"></span>
+              <p>Unavailable</p>
             </div>
           </div>
         </div>

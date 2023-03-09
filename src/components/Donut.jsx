@@ -43,7 +43,6 @@ const electionLabel = {
 
                 // draw text
                 const textWidth = ctx.measureText(chart.data.labels[index])?.width
-                console.log(textWidth)
                 ctx.font = '12px Arial'
 
                 // control the position
@@ -83,7 +82,6 @@ const circleMiddle = {
         const centerY = chart.getDatasetMeta(0).data[0]._view.y
         const datapoint = chart.getDatasetMeta(0).data[0].tooltipPosition()
         const radius = Math.sqrt( Math.pow((centerX-datapoint.x), 2) + Math.pow((centerY-datapoint.y), 2) ) /1.6
-        console.log(datapoint, "radius")
         ctx.save()
         ctx.strokeStyle = 'white'
         ctx.beginPath();
